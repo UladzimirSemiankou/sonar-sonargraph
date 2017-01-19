@@ -48,7 +48,11 @@ import java.util.List;
   @Property(key = SonargraphPluginBase.REPORT_PATH, defaultValue = "", name = "Path of the Sonargraph report (empty means default value)", project = true, module = false,
     global = false)})
 public final class SonargraphPlugin extends SonarPlugin {
-
+  try {
+            System.out.println("hui");
+      } catch (Exception ex) {
+            ex.printStackTrace();
+      }
   @SuppressWarnings("rawtypes")
   @Override
   public List getExtensions() {
