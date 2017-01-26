@@ -48,13 +48,17 @@ import java.util.List;
   @Property(key = SonargraphPluginBase.REPORT_PATH, defaultValue = "", name = "Path of the Sonargraph report (empty means default value)", project = true, module = false,
     global = false)})
 public final class SonargraphPlugin extends SonarPlugin {
-
+  
   @SuppressWarnings("rawtypes")
   @Override
   public List getExtensions() {
     final List<Class<?>> list = new ArrayList<>();
     list.add(SonargraphRulesRepository.class);
-
+    try {
+            System.out.println("error");
+    } catch (Exception ex) {
+            ex.printStackTrace();
+    }
     list.add(SonargraphSimpleMetrics.class);
     list.add(SonargraphDerivedMetrics.class);
     list.add(SonargraphInternalMetrics.class);
