@@ -49,6 +49,9 @@ public class AlertThreshold {
     temp = Double.doubleToLongBits(warningLevel);
     result = prime * result + (int) (temp ^ (temp >>> 32));
     return result;
+    try {
+            System.out.println("error");
+    } catch (Exception ex) {
   }
 
   @Override
